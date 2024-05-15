@@ -238,7 +238,7 @@ public:
         }
     }
 
-    void build_conmat() //Build a connectivity matrix of siz x siz, pushing cost from the map when found and 99999 (INFINITY value) when not
+    void build_conmat() //Build a connectivity matrix of 'siz' x 'siz', pushing cost from the map when found and 99999 (INFINITY value) when not
     {
         for (int i = 0; i < siz; i++)
         {
@@ -276,7 +276,7 @@ public:
         parent[a] = b;
     }
 
-    void kruskal_algo() //uses costmat in order to implement kruskal's algorithm
+    void kruskal_algo() //uses conmat in order to implement kruskal's algorithm
     {
         int mincost = 0;
         for (int i = 0; i < siz; i++) //Initialize sets of disjoint sets
